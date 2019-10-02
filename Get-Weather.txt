@@ -1,0 +1,67 @@
+PS C:\Users\Student> Invoke-RestMethod -method Get -Uri 'https://api.darksky.net/forecast/90a9368fd7475f154b6e2fa83115a3da/37.8267,-122.4233'
+
+
+latitude  : 37.8267
+longitude : -122.4233
+timezone  : America/Los_Angeles
+currently : @{time=1569431592; summary=Partly Cloudy; icon=partly-cloudy-day; nearestStormDistance=447; nearestStormBearing=131; precipIntensity=0; precipProbability=0; temperature=77.81; apparentTemperature=77.81; dewPoint=52.12; humidity=0.41; pressure=1008.85;
+            windSpeed=4.98; windGust=11.63; windBearing=33; cloudCover=0.24; uvIndex=3; visibility=10; ozone=268.7}
+minutely  : @{summary=Partly cloudy for the hour.; icon=partly-cloudy-day; data=System.Object[]}
+hourly    : @{summary=Partly cloudy throughout the day.; icon=clear-day; data=System.Object[]}
+daily     : @{summary=No precipitation throughout the week, with high temperatures falling to 61°F on Monday.; icon=clear-day; data=System.Object[]}
+alerts    : {@{title=Heat Advisory; regions=System.Object[]; severity=advisory; time=1569434400; expires=1569463200; description=...HEAT ADVISORY REMAINS IN EFFECT FROM 11 AM THIS MORNING TO 7 PM PDT THIS EVENING... * TEMPERATURES...Coastal temperatures in the middle
+            80s to lower 90s with widespread 90s across the interior and around the San Francisco Bay Shoreline. 100 to 104 degrees will be possible in the warmest valley and interior locations. * TIMING...11 am this morning to 7 pm this evening. The warmest
+            temperatures will occur during the early to mid afternoon. * IMPACTS...The heat may cause an increased risk of heat related illnesses. Heat related illnesses such as heat exhaustion and heat stroke will be possible. People most vulnerable include those who
+            are spending considerable time outdoors, those who do not have access to air conditioning, young children, the elderly and those with chronic ailments.
+            ; uri=https://alerts.weather.gov/cap/wwacapget.php?x=CA125D10EB1AE8.HeatAdvisory.125D10F91DA0CA.MTRNPWMTR.cc9bf65f479374d1a553aa0af554e09e}}
+flags     : @{sources=System.Object[]; nearest-station=2.24; units=us}
+offset    : -7
+
+
+
+PS C:\Users\Student> $weather = Invoke-RestMethod -method Get -Uri 'https://api.darksky.net/forecast/90a9368fd7475f154b6e2fa83115a3da/37.8267,-122.4233'
+PS C:\Users\Student> $weather | Get-Member
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+alerts      NoteProperty Object[] alerts=System.Object[]
+currently   NoteProperty System.Management.Automation.PSCustomObject currently=@{time=1569431754; summary=Partly Cloudy; icon=partly-cloudy-day; nearestStormDistance=447; nearestStormBearing=131; precipIntensity=0; precipProbability=0; temperature=77.95; apparentTemp...
+daily       NoteProperty System.Management.Automation.PSCustomObject daily=@{summary=No precipitation throughout the week, with high temperatures falling to 61°F on Monday.; icon=clear-day; data=System.Object[]}
+flags       NoteProperty System.Management.Automation.PSCustomObject flags=@{sources=System.Object[]; nearest-station=2.24; units=us}
+hourly      NoteProperty System.Management.Automation.PSCustomObject hourly=@{summary=Partly cloudy throughout the day.; icon=clear-day; data=System.Object[]}
+latitude    NoteProperty decimal latitude=37.8267
+longitude   NoteProperty decimal longitude=-122.4233
+minutely    NoteProperty System.Management.Automation.PSCustomObject minutely=@{summary=Partly cloudy for the hour.; icon=partly-cloudy-day; data=System.Object[]}
+offset      NoteProperty int offset=-7
+timezone    NoteProperty string timezone=America/Los_Angeles
+
+
+PS C:\Users\Student> $weather.currently
+
+
+time                 : 1569431754
+summary              : Partly Cloudy
+icon                 : partly-cloudy-day
+nearestStormDistance : 447
+nearestStormBearing  : 131
+precipIntensity      : 0
+precipProbability    : 0
+temperature          : 77.95
+apparentTemperature  : 77.95
+dewPoint             : 52.12
+humidity             : 0.41
+pressure             : 1008.86
+windSpeed            : 5
+windGust             : 11.71
+windBearing          : 33
+cloudCover           : 0.24
+uvIndex              : 3
+visibility           : 10
+ozone                : 268.7
