@@ -101,5 +101,22 @@ Get-MyProcess -name module
       1000 ucrtbase.dll                                       C:\Windows\System32\ucrtbase.dll
       1152 RPCRT4.dll                                         C:\Windows\System32\RPCRT4.dll
        512 bcryptPrimitives.dll                               C:\Windows\System32\bcryptPrimitives.dll
+       
+       ###SimpleFunctions###
+Function WP {
+Param($String1)
+$String1
+}
+#You create a function WP
+#with the Param $String1
+You then output $String1
+
+WP -String1 asdf
+asdf
+
+You are calling the function WP 
+for the parameter String1 you are 
+assigning asdf, you then output
+string1 which is asdf
 
 
