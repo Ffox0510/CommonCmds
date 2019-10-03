@@ -119,4 +119,8 @@ for the parameter String1 you are
 assigning asdf, you then output
 string1 which is asdf
 
+PS C:\Users\Student> $geoCOde = Invoke-RestMethod -method Get -Uri "https://www.mapquestapi.com/geocoding/v1/address?key=uHwk9TGvdKall0Skwca6khiJyjpz0pGV&inFormat=kvp&outFormat=json&location=Denver%2C+CO&thumbMaps=false" | get-member
+>>
+PS C:\Users\Student> $geocode
+
 
