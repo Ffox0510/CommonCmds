@@ -124,3 +124,17 @@ PS C:\Users\Student> $geoCOde = Invoke-RestMethod -method Get -Uri "https://www.
 PS C:\Users\Student> $geocode
 
 
+Get-alls the commands related to the noun job
+PS C:\Users\Student> get-command -noun job
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Debug-Job                                          3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Get-Job                                            3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Receive-Job                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Remove-Job                                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Resume-Job                                         3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Start-Job                                          3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Stop-Job                                           3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Suspend-Job                                        3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Wait-Job                                           3.0.0.0    Microsoft.PowerShell.Core
